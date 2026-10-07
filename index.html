@@ -1,6 +1,7 @@
-<html lang="zh-CN" class=" " style="--next-bg-menuBar: #FFFFFF; --next-bg-menuBar-light-1: #ffffff; --next-bg-menuBarColor: #505968; --next-bg-menuBarActiveColor: rgba(242, 243, 245, 1); --next-bg-topBar: #ffffff; --next-bg-topBarColor: #606266; --next-bg-columnsMenuBar: #545c64; --next-bg-columnsMenuBarColor: #e6e6e6; --el-color-primary-dark-2: #2952dd; --el-color-primary: #2E5CF6; --el-color-primary-light-1: #426cf6; --el-color-primary-light-2: #577cf7; --el-color-primary-light-3: #6c8cf8; --el-color-primary-light-4: #819df9; --el-color-primary-light-5: #96adfa; --el-color-primary-light-6: #abbdfb; --el-color-primary-light-7: #c0cefc; --el-color-primary-light-8: #d5defd; --el-color-primary-light-9: #eaeefe;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<!--避免微信管理防盗链机制-->
@@ -14,9 +15,7 @@
 	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/setings.ae40f955.css">
 	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/closeFull.cd347f09.css">
 	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/index.da4f4d9b.css">
-	
-	
-	
+
 	<style>
         .container {
             position: relative;
@@ -24,24 +23,16 @@
             height: 100%;
             overflow: hidden; /* 隐藏超出部分 */
         }
-/*@font-face {*/
-/*        font-family: font;*/
-/*        src: url(FontSmaller_View.ttf)*/
-/*}*/
 .tilted-text {
     position: absolute;
     transform: rotate(-22deg);
     font-size: 18px;
     color: rgba(0,240,108,0.3);
-    /*font-weight: bold;*/
     white-space: nowrap; /* 不换行 */
     overflow: hidden; /* 隐藏超出部分 */
-    font-family: font;
+    font-family: 'SimSun', '宋体', sans-serif;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); /* 添加模糊阴影 */
-    font-family: 'SimSun', '宋体', sans-serif; /* 设置宋体字体 */
 }
-
-
         body {
             margin: 0;
             overflow: hidden;
@@ -55,44 +46,9 @@
     color: transparent; /* 文字颜色设为透明 */
     background-clip: text; /* 兼容其他浏览器 */
     display: inline-block; /* 保持文字起始位置与普通字体一致 */
-    font-family: 'SimSun', '宋体', sans-serif; /* 设置宋体字体 */
+    font-family: 'SimSun', '宋体', sans-serif;
 }
-
-
     </style>
-    
-    
-    
-    
-    
-    <!--js-->
-     <script>
-        window.onload = function() {
-            var dateElements = document.querySelectorAll('.tilted-text');
-            var currentDate = new Date();
-            var formattedDate = currentDate.getFullYear() + '-' +
-                                ('0' + (currentDate.getMonth() + 1)).slice(-2) + '-' +
-                                ('0' + currentDate.getDate()).slice(-2) + ' ' +
-                                ('0' + currentDate.getHours()).slice(-2) + ':' +
-                                ('0' + currentDate.getMinutes()).slice(-2) + ':' +
-                                ('0' + currentDate.getSeconds()).slice(-2);
-            dateElements.forEach(function(element) {
-                if (element.textContent.includes('2023-10-31 14:30:15')) {
-                    element.textContent = formattedDate;
-                }
-            });
-        }
-    </script>
-<!-- <script type="text/javascript">-->
-<!--  function isWeChatBrowser() {-->
-<!--    var ua = navigator.userAgent.toLowerCase();-->
-<!--    return ua.indexOf('micromessenger') !== -1;-->
-<!--  }-->
-
-<!--  if (!isWeChatBrowser()) {-->
-<!--    window.location.href = "wx.html";-->
-<!--  }-->
-<!--</script>-->
 
 <noscript>
         <style>
@@ -101,14 +57,10 @@
                 display: none;
             }
         </style>
-         <meta http-equiv="refresh" content="0; url=wx.html"> <!-- 替换为你的跳转链接 -->
+         <meta http-equiv="refresh" content="0; url=wx.html">
 </noscript>
-
-	</head>
-
-
+</head>
 <body>
-
 <svg width="0" height="0">
         <defs>
             <lineargradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -118,12 +70,10 @@
         </defs>
     </svg>
 <div class="container">
-   
 	<div id="app" data-v-app="">
 		<div data-v-329f3720="" class="contentBox">
 			<div data-v-329f3720="" class="card-box">
 				<div data-v-329f3720="" class="card-line">
-				     
 					<div data-v-329f3720="" class="label">车牌号</div>
 					<div data-v-329f3720="" class="value">赣ARJV960</div>
 				</div>
@@ -145,102 +95,112 @@
 		</div><!----><!---->
 	</div>
 
-
 <div class="tilted-text" style="left: 35px; top: 10px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 40px; top: 20px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 35px; top: 210px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 40px; top: 220px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 35px; top: 410px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 40px; top: 420px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 35px; top: 610px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 40px; top: 620px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 35px; top: 810px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 40px; top: 820px;">2026-10-07 15:15:30</div>
-        
-        
-        <div class="tilted-text" style="left: 235px; top: 10px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 240px; top: 20px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 235px; top: 210px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 240px; top: 220px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 235px; top: 410px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 240px; top: 420px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 235px; top: 610px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 240px; top: 620px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 235px; top: 810px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 240px; top: 820px;">2026-10-07 15:15:30</div>
-        
-        
-         <div class="tilted-text" style="left: 435px; top: 10px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 440px; top: 20px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 435px; top: 210px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 440px; top: 220px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 435px; top: 410px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 440px; top: 420px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 435px; top: 610px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 440px; top: 620px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 435px; top: 810px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 440px; top: 820px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 635px; top: 10px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 640px; top: 20px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 635px; top: 210px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 640px; top: 220px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 635px; top: 410px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 640px; top: 420px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 635px; top: 610px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 640px; top: 620px;">2026-10-07 15:15:30</div>
-        
-        <div class="tilted-text" style="left: 635px; top: 810px;">赣ARJV960</div>
-        <div class="tilted-text" style="left: 640px; top: 820px;">2026-10-07 15:15:30</div>
-        
+<div class="tilted-text time-watermark" style="left: 40px; top: 20px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 35px; top: 210px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 220px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 35px; top: 410px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 420px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 35px; top: 610px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 620px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 35px; top: 810px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 820px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 235px; top: 10px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 20px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 235px; top: 210px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 220px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 235px; top: 410px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 420px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 235px; top: 610px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 620px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 235px; top: 810px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 820px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 435px; top: 10px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 20px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 435px; top: 210px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 220px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 435px; top: 410px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 420px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 435px; top: 610px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 620px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 435px; top: 810px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 820px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 635px; top: 10px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 20px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 635px; top: 210px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 220px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 635px; top: 410px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 420px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 635px; top: 610px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 620px;">2026-10-07 15:15:30</div>
+
+<div class="tilted-text" style="left: 635px; top: 810px;">赣ARJV960</div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 820px;">2026-10-07 15:15:30</div>
+
          <div></div>
     </div>
 
 <script>
   function adjustDivPosition() {
     var div = document.getElementById('zp1');
+    if(!div) return;
     var screenWidth = window.innerWidth;
-    var screenHeight = window.innerHeight;
- const topValue = div.style.top;
- const topaa = parseFloat(topValue);
- const leftValue = div.style.left;
-  const leftaa = parseFloat(leftValue);
- 
-    // 基于390x844的屏幕尺寸的比例计算
-    var top = 184 * (topaa / 844);
+    const topValue = div.style.top;
+    const topaa = parseFloat(topValue);
+    const leftValue = div.style.left;
+    const leftaa = parseFloat(leftValue);
+
     var left = 210 * (screenWidth / 390);
     var fontSize = 21.5 * (screenWidth / 390);
-    
-   
 
-    // 设置div的top, left和font-size
     div.style.left = left + 'px';
     div.style.fontSize = fontSize + 'px';
   }
-
-  // 初始调用一次调整函数
   adjustDivPosition();
-
-  // 监听窗口大小变化，实时调整
   window.addEventListener('resize', adjustDivPosition);
 </script>
 
+<!--页面打开获取本次访问的北京时间，只赋值一次，不会跳动-->
+<script>
+function formatBeijingTime() {
+  const utcNow = new Date();
+  const bjTime = new Date(utcNow.getTime() + 8 * 60 * 60 * 1000);
 
+  const y = bjTime.getUTCFullYear();
+  const m = ('0' + (bjTime.getUTCMonth() + 1)).slice(-2);
+  const d = ('0' + bjTime.getUTCDate()).slice(-2);
+  const h = ('0' + bjTime.getUTCHours()).slice(-2);
+  const mi = ('0' + bjTime.getUTCMinutes()).slice(-2);
+  const s = ('0' + bjTime.getUTCSeconds()).slice(-2);
+  return `${y}-${m}-${d} ${h}:${mi}:${s}`;
+}
 
+window.onload = function () {
+  // 仅页面加载的时候执行1次，没有定时器，时间固定
+  const timeStr = formatBeijingTime();
+  document.querySelectorAll('.time-watermark').forEach(el => {
+    el.textContent = timeStr;
+  });
+};
+</script>
 
-</body></html>
+</body>
+</html>
