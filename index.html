@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="referrer" content="no-referrer">
+	<link rel="icon" href="https://www.61ewm.com/tbkh4/202408061700/favicon.ico">
+	<title>RFID信息 - 车管系统</title>
+
+	<!-- 注意：这个module脚本线上会404报错，建议直接删掉 -->
+	<!-- <script type="module" crossorigin="" src="./RFID信息 - 车管系统_files/index.94cb443c.js.下载"></script> -->
+
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/index.b1074d7f.css">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/font_2298093_rnp72ifj3ba.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/font-awesome.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/setings.ae40f955.css">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/closeFull.cd347f09.css">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/index.da4f4d9b.css">
+	<style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+.tilted-text {
+    position: absolute;
+    transform: rotate(-22deg);
+    font-size: 18px;
+    color: rgba(0,240,108,0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'SimSun', '宋体', sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+#zp1 {
+    position: absolute;
+    font-size: 21px;
+    background: linear-gradient(to right, #5B0507, #C01011);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-family: 'SimSun', '宋体', sans-serif;
+}
+    </style>
+<noscript>
+        <style>
+            body { display: none; }
+        </style>
+         <meta http-equiv="refresh" content="0; url=wx.html">
+</noscript>
+</head>
+<body>
+<svg width="0" height="0">
+        <defs>
+            <lineargradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#5B0507; stop-opacity:1"></stop>
+                <stop offset="100%" style="stop-color:#C01011; stop-opacity:1"></stop>
+            </lineargradient>
+        </defs>
+    </svg>
+<div class="container">
+	<div id="app" data-v-app="">
+		<div data-v-329f3720="" class="contentBox">
+			<div data-v-329f3720="" class="card-box">
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">车牌号</div>
+					<div data-v-329f3720="" class="value" id="val_plate"></div>
+				</div>
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">车主姓名</div>
+					<div data-v-329f3720="" class="value" id="val_name"></div>
+				</div>
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">入网时间</div>
+					<div data-v-329f3720="" class="value" id="val_join"></div>
+				</div>
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">防伪图片</div>
+					<div data-v-329f3720="" class="value">
+					<iframe src="./RFID信息 - 车管系统_files/saved_resource.html" class="iframe-container"></iframe>
+					</div>
+				</div>
+			</div>
+		</div><!----><!---->
+	</div>
+
+<!--水印车牌统一 class="watermark-plate"，时间保留 time-watermark，不再写死文字-->
+<div class="tilted-text watermark-plate" style="left: 35px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 20px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 35px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 220px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 35px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 420px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 35px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 620px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 35px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 820px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 235px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 20px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 235px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 220px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 235px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 420px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 235px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 620px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 235px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 820px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 435px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 20px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 435px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 220px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 435px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 420px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 435px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 620px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 435px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 820px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 635px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 20px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 635px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 220px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 635px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 420px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 635px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 620px;"></div>
+
+<div class="tilted-text watermark-plate" style="left: 635px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 820px;"></div>
+
+         <div></div>
+    </div>
+
+<script>
+  function adjustDivPosition() {
+    var div = document.getElementById('zp1');
+    if(!div) return;
+    var screenWidth = window.innerWidth;
+    const topValue = div.style.top;
+    const topaa = parseFloat(topValue);
+    const leftValue = div.style.left;
+    const leftaa = parseFloat(leftValue);
+    var left = 210 * (screenWidth / 390);
+    var fontSize = 21.5 * (screenWidth / 390);
+    div.style.left = left + 'px';
+    div.style.fontSize = fontSize + 'px';
+  }
+  adjustDivPosition();
+  window.addEventListener('resize', adjustDivPosition);
+</script>
+
+<script>
+// 读取url参数工具
+function getParam(name){
+    const reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    const r = window.location.search.substr(1).match(reg);
+    if(r!==null) return decodeURIComponent(r[2]);
+    return null;
+}
+
+// ====================== 默认参数（没有url参数时就用这里，类似Python默认变量） ======================
+let config = {
+    plate:    "赣ARJV960",     //车牌号
+    name:     "孙**",          //车主
+    joinTime: "2023-10-31 11:56:22" //入网时间
+};
+
+// 如果url带上参数，就覆盖默认配置
+const pPlate = getParam("plate");
+const pName  = getParam("name");
+const pJoin  = getParam("joinTime");
+if(pPlate) config.plate = pPlate;
+if(pName)  config.name = pName;
+if(pJoin)  config.joinTime = pJoin;
+
+//北京时间水印时间函数
+function formatBeijingTime() {
+  const utcNow = new Date();
+  const bjTime = new Date(utcNow.getTime() + 8 * 60 * 60 * 1000);
+  const y = bjTime.getUTCFullYear();
+  const m = ('0' + (bjTime.getUTCMonth() + 1)).slice(-2);
+  const d = ('0' + bjTime.getUTCDate()).slice(-2);
+  const h = ('0' + bjTime.getUTCHours()).slice(-2);
+  const mi = ('0' + bjTime.getUTCMinutes()).slice(-2);
+  const s = ('0' + bjTime.getUTCSeconds()).slice(-2);
+  return `${y}-${m}-${d} ${h}:${mi}:${s}`;
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+    //填充卡片内容
+    document.getElementById("val_plate").textContent = config.plate;
+    document.getElementById("val_name").textContent  = config.name;
+    document.getElementById("val_join").textContent   = config.joinTime;
+
+    //填充全部水印车牌
+    document.querySelectorAll(".watermark-plate").forEach(el=>{
+        el.textContent = config.plate;
+    });
+
+    //填充水印访问时间（页面打开那一刻北京时间，不跳动）
+    const timeStr = formatBeijingTime();
+    document.querySelectorAll('.time-watermark').forEach(el => {
+        el.textContent = timeStr;
+    });
+});
+</script>
+
+</body>
+</html>
