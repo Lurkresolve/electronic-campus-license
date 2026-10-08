@@ -214,7 +214,6 @@ function formatBeijingTime() {
 document.addEventListener('DOMContentLoaded',function(){
     //填充卡片内容
     document.getElementById("val_plate").textContent = config.plate;
-	document.getElementById("zp1").textContent = config.plate;
     document.getElementById("val_name").textContent  = config.name;
     document.getElementById("val_join").textContent   = config.joinTime;
 
@@ -229,6 +228,25 @@ document.addEventListener('DOMContentLoaded',function(){
         el.textContent = timeStr;
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. 获取iframe节点
+    const iframe = document.querySelector('.iframe-container');
+
+    // 2. iframe加载完成后再去修改里面元素（重点！iframe异步加载，没加载完找不到元素）
+    iframe.onload = function() {
+        // 获取iframe内部文档对象
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        // 在iframe文档里面找id=zp1的div
+        const zp1Dom = iframeDoc.getElementById('zp1');
+        if(zp1Dom){
+            zp1Dom.textContent = config.plate;
+            console.log("修改成功，新值：", config.plate);
+        }else{
+            console.log("iframe内找不到 #zp1");
+        }
+    }
+})
 </script>
 
 </body>
