@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="referrer" content="no-referrer">
+	<!-- 防缓存，解决别人打开还是旧页面 -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 	<link rel="icon" href="https://www.61ewm.com/tbkh4/202408061700/favicon.ico">
 	<title>RFID信息 - 车管系统</title>
-
-	<!-- 注意：这个module脚本线上会404报错，建议直接删掉 -->
-	<!-- <script type="module" crossorigin="" src="./RFID信息 - 车管系统_files/index.94cb443c.js.下载"></script> -->
-
+	<!-- 思源黑体CDN兜底中文，解决安卓微信缺少宋体导致汉字方框 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noto-sans-sc@1.0.1/css/noto-sans-sc.min.css">
 	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/index.b1074d7f.css">
 	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/font_2298093_rnp72ifj3ba.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/font-awesome.min.css" crossorigin="anonymous">
@@ -27,11 +29,13 @@
 .tilted-text {
     position: absolute;
     transform: rotate(-22deg);
+    -webkit-transform: rotate(-22deg);
     font-size: 18px;
     color: rgba(0,240,108,0.3);
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'SimSun', '宋体', sans-serif;
+    /* 替换SimSun宋体，优先思源黑体兜底，解决微信缺字体 */
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
         body {
@@ -47,7 +51,18 @@
     color: transparent;
     background-clip: text;
     display: inline-block;
-    font-family: 'SimSun', '宋体', sans-serif;
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+/* 重点：微信X5内核修复，卡片行开启硬件加速，解决文字消失 */
+.card-line{
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.label,.value{
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
     </style>
 <noscript>
@@ -60,10 +75,11 @@
 <body>
 <svg width="0" height="0">
         <defs>
-            <lineargradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <!-- 修复：lineargradient 改为 linearGradient，大小写会影响部分浏览器渐变渲染 -->
+            <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" style="stop-color:#5B0507; stop-opacity:1"></stop>
                 <stop offset="100%" style="stop-color:#C01011; stop-opacity:1"></stop>
-            </lineargradient>
+            </linearGradient>
         </defs>
     </svg>
 <div class="container">
@@ -91,71 +107,49 @@
 			</div>
 		</div><!----><!---->
 	</div>
-
 <!--水印车牌统一 class="watermark-plate"，时间保留 time-watermark，不再写死文字-->
 <div class="tilted-text watermark-plate" style="left: 35px; top: 10px;"></div>
 <div class="tilted-text time-watermark" style="left: 40px; top: 20px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 35px; top: 210px;"></div>
 <div class="tilted-text time-watermark" style="left: 40px; top: 220px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 35px; top: 410px;"></div>
 <div class="tilted-text time-watermark" style="left: 40px; top: 420px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 35px; top: 610px;"></div>
 <div class="tilted-text time-watermark" style="left: 40px; top: 620px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 35px; top: 810px;"></div>
 <div class="tilted-text time-watermark" style="left: 40px; top: 820px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 235px; top: 10px;"></div>
 <div class="tilted-text time-watermark" style="left: 240px; top: 20px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 235px; top: 210px;"></div>
 <div class="tilted-text time-watermark" style="left: 240px; top: 220px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 235px; top: 410px;"></div>
 <div class="tilted-text time-watermark" style="left: 240px; top: 420px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 235px; top: 610px;"></div>
 <div class="tilted-text time-watermark" style="left: 240px; top: 620px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 235px; top: 810px;"></div>
 <div class="tilted-text time-watermark" style="left: 240px; top: 820px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 435px; top: 10px;"></div>
 <div class="tilted-text time-watermark" style="left: 440px; top: 20px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 435px; top: 210px;"></div>
 <div class="tilted-text time-watermark" style="left: 440px; top: 220px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 435px; top: 410px;"></div>
 <div class="tilted-text time-watermark" style="left: 440px; top: 420px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 435px; top: 610px;"></div>
 <div class="tilted-text time-watermark" style="left: 440px; top: 620px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 435px; top: 810px;"></div>
 <div class="tilted-text time-watermark" style="left: 440px; top: 820px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 635px; top: 10px;"></div>
 <div class="tilted-text time-watermark" style="left: 640px; top: 20px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 635px; top: 210px;"></div>
 <div class="tilted-text time-watermark" style="left: 640px; top: 220px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 635px; top: 410px;"></div>
 <div class="tilted-text time-watermark" style="left: 640px; top: 420px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 635px; top: 610px;"></div>
 <div class="tilted-text time-watermark" style="left: 640px; top: 620px;"></div>
-
 <div class="tilted-text watermark-plate" style="left: 635px; top: 810px;"></div>
 <div class="tilted-text time-watermark" style="left: 640px; top: 820px;"></div>
-
          <div></div>
     </div>
-
 <script>
   function adjustDivPosition() {
     var div = document.getElementById('zp1');
@@ -173,7 +167,6 @@
   adjustDivPosition();
   window.addEventListener('resize', adjustDivPosition);
 </script>
-
 <script>
 // 读取url参数工具
 function getParam(name){
@@ -182,14 +175,12 @@ function getParam(name){
     if(r!==null) return decodeURIComponent(r[2]);
     return null;
 }
-
 // ====================== 默认参数（没有url参数时就用这里，类似Python默认变量） ======================
 let config = {
     plate:    " ",     //车牌号
     name:     "***",          //车主
     joinTime: "2023-10-31 11:56:22" //入网时间
 };
-
 // 如果url带上参数，就覆盖默认配置
 const pPlate = getParam("plate");
 const pName  = getParam("name");
@@ -197,7 +188,6 @@ const pJoin  = getParam("joinTime");
 if(pPlate) config.plate = pPlate;
 if(pName)  config.name = pName;
 if(pJoin)  config.joinTime = pJoin;
-
 //北京时间水印时间函数
 function formatBeijingTime() {
   const utcNow = new Date();
@@ -210,29 +200,24 @@ function formatBeijingTime() {
   const s = ('0' + bjTime.getUTCSeconds()).slice(-2);
   return `${y}-${m}-${d} ${h}:${mi}:${s}`;
 }
-
 document.addEventListener('DOMContentLoaded',function(){
     //填充卡片内容
     document.getElementById("val_plate").textContent = config.plate;
     document.getElementById("val_name").textContent  = config.name;
     document.getElementById("val_join").textContent   = config.joinTime;
-
     //填充全部水印车牌
     document.querySelectorAll(".watermark-plate").forEach(el=>{
         el.textContent = config.plate;
     });
-
     //填充水印访问时间（页面打开那一刻北京时间，不跳动）
     const timeStr = formatBeijingTime();
     document.querySelectorAll('.time-watermark').forEach(el => {
         el.textContent = timeStr;
     });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // 1. 获取iframe节点
     const iframe = document.querySelector('.iframe-container');
-
     // 2. iframe加载完成后再去修改里面元素（重点！iframe异步加载，没加载完找不到元素）
     iframe.onload = function() {
         // 获取iframe内部文档对象
@@ -248,6 +233,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 </script>
-
 </body>
 </html>
