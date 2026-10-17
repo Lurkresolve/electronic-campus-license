@@ -185,7 +185,7 @@ const pJoin  = urlParams.get("joinTime");
 
 if(pPlate) {
 	config.plate = pPlate;
-	bugPlate = pPlate.replace(/[\u4e00-\u9fa5]/g,"▯")
+	config.bugPlate = pPlate.replace(/[\u4e00-\u9fa5]/g,"▯")
 }
 if(pName)  config.name = pName;
 if(pJoin)  config.joinTime = pJoin;
