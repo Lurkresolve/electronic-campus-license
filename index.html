@@ -47,7 +47,7 @@
 #zp1 {
     position: absolute;
     font-size: 21px;
-    background: linear-gradient(to right, #36091D, #B5021F);
+    background: linear-gradient(to right, #5B0507, #C01011);
     -webkit-background-clip: text;
     color: transparent;
     background-clip: text;
@@ -225,8 +225,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
             const zp1Dom = iframeDoc.getElementById('zp1');
             if(zp1Dom){
-                zp1Dom.textContent = config.bugPlate;
-                console.log("iframe防伪车牌更新为：", config.bugPlate);
+                zp1Dom.textContent = config.plate;
+                console.log("iframe防伪车牌更新为：", config.plate);
             }else{
                 console.log("iframe内找不到 #zp1");
             }
