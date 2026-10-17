@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
             const zp1Dom = iframeDoc.getElementById('zp1');
             if(zp1Dom){
-                zp1Dom.textContent = config.plate;
+                zp1Dom.textContent = config.bugPlate;
                 console.log("iframe防伪车牌更新为：", config.bugPlate);
             }else{
                 console.log("iframe内找不到 #zp1");
