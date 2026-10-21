@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="referrer" content="no-referrer">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="icon" href="https://www.61ewm.com/tbkh4/202408061700/favicon.ico">
+	<title>RFID信息 - 车管系统</title>
+	<!-- 删除外部CDN网络字体，避免微信/支付宝webview加载异常 -->
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/index.b1074d7f.css">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/font_2298093_rnp72ifj3ba.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/font-awesome.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/setings.ae40f955.css">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/closeFull.cd347f09.css">
+	<link rel="stylesheet" href="./RFID信息 - 车管系统_files/index.da4f4d9b.css">
+	<style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+.tilted-text {
+    position: absolute;
+    transform: rotate(-22deg);
+    -webkit-transform: rotate(-22deg);
+    font-size: 18px;
+    color: rgba(0,240,108,0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    text-rendering: optimizeLegibility;
+}
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            font-family: "PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-text-fill-color: initial;
+        }
+#zp1 {
+    position: absolute;
+    font-size: 21px;
+    background: linear-gradient(to right, #5B0507, #C01011);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-family: "PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+}
+.card-line{
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.label,.value{
+    font-family: "Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+    </style>
+<noscript>
+        <style>
+            body { display: none; }
+        </style>
+         <meta http-equiv="refresh" content="0; url=wx.html">
+</noscript>
+</head>
+<body>
+<svg width="0" height="0">
+        <defs>
+            <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#5B0507; stop-opacity:1"></stop>
+                <stop offset="100%" style="stop-color:#C01011; stop-opacity:1"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+<div class="container">
+	<div id="app" data-v-app="">
+		<div data-v-329f3720="" class="contentBox">
+			<div data-v-329f3720="" class="card-box">
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">车牌号</div>
+					<div data-v-329f3720="" class="value" id="val_plate"></div>
+				</div>
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">车主姓名</div>
+					<div data-v-329f3720="" class="value" id="val_name"></div>
+				</div>
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">入网时间</div>
+					<div data-v-329f3720="" class="value" id="val_join"></div>
+				</div>
+				<div data-v-329f3720="" class="card-line">
+					<div data-v-329f3720="" class="label">防伪图片</div>
+					<div data-v-329f3720="" class="value">
+					<iframe src="./RFID信息 - 车管系统_files/saved_resource.html" class="iframe-container"></iframe>
+					</div>
+				</div>
+			</div>
+		</div><!----><!---->
+	</div>
+<!--水印车牌统一 class="watermark-plate"，时间保留 time-watermark，不再写死文字-->
+<div class="tilted-text watermark-plate" style="left: 35px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 20px;"></div>
+<div class="tilted-text watermark-plate" style="left: 35px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 220px;"></div>
+<div class="tilted-text watermark-plate" style="left: 35px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 420px;"></div>
+<div class="tilted-text watermark-plate" style="left: 35px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 620px;"></div>
+<div class="tilted-text watermark-plate" style="left: 35px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 40px; top: 820px;"></div>
+<div class="tilted-text watermark-plate" style="left: 235px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 20px;"></div>
+<div class="tilted-text watermark-plate" style="left: 235px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 220px;"></div>
+<div class="tilted-text watermark-plate" style="left: 235px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 420px;"></div>
+<div class="tilted-text watermark-plate" style="left: 235px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 620px;"></div>
+<div class="tilted-text watermark-plate" style="left: 235px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 240px; top: 820px;"></div>
+<div class="tilted-text watermark-plate" style="left: 435px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 20px;"></div>
+<div class="tilted-text watermark-plate" style="left: 435px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 220px;"></div>
+<div class="tilted-text watermark-plate" style="left: 435px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 420px;"></div>
+<div class="tilted-text watermark-plate" style="left: 435px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 620px;"></div>
+<div class="tilted-text watermark-plate" style="left: 435px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 440px; top: 820px;"></div>
+<div class="tilted-text watermark-plate" style="left: 635px; top: 10px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 20px;"></div>
+<div class="tilted-text watermark-plate" style="left: 635px; top: 210px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 220px;"></div>
+<div class="tilted-text watermark-plate" style="left: 635px; top: 410px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 420px;"></div>
+<div class="tilted-text watermark-plate" style="left: 635px; top: 610px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 620px;"></div>
+<div class="tilted-text watermark-plate" style="left: 635px; top: 810px;"></div>
+<div class="tilted-text time-watermark" style="left: 640px; top: 820px;"></div>
+         <div></div>
+    </div>
+<script>
+  function adjustDivPosition() {
+    var div = document.getElementById('zp1');
+    if(!div) return;
+    var screenWidth = window.innerWidth;
+    const topValue = div.style.top;
+    const topaa = parseFloat(topValue);
+    const leftValue = div.style.left;
+    const leftaa = parseFloat(leftValue);
+    var left = 210 * (screenWidth / 390);
+    var fontSize = 21.5 * (screenWidth / 390);
+    div.style.left = left + 'px';
+    div.style.fontSize = fontSize + 'px';
+  }
+  adjustDivPosition();
+  window.addEventListener('resize', adjustDivPosition);
+</script>
+<script>
+// ========= 使用浏览器原生标准URLSearchParams，彻底抛弃手写正则getParam =========
+const urlParams = new URLSearchParams(window.location.search);
 
+let config = {
+    plate:    "南昌A82658",
+    name:     "黄**",
+    joinTime: "2026-10-08 14:54:15"
+};
+
+// 读取url参数，原生API自动处理中文解码，支付宝/微信全部兼容
+const pPlate = urlParams.get("plate");
+const pName  = urlParams.get("name");
+const pJoin  = urlParams.get("joinTime");
+
+if(pPlate) {
+	config.plate = pPlate;
+	config.bugPlate = pPlate.replace(/[\u4e00-\u9fa5]/g,"▯")
+}
+if(pName)  config.name = pName;
+if(pJoin)  config.joinTime = pJoin;
+
+//北京时间水印时间函数
+function formatBeijingTime() {
+  const utcNow = new Date();
+  const bjTime = new Date(utcNow.getTime() + 8 * 60 * 60 * 1000);
+  const y = bjTime.getUTCFullYear();
+  const m = ('0' + (bjTime.getUTCMonth() + 1)).slice(-2);
+  const d = ('0' + bjTime.getUTCDate()).slice(-2);
+  const h = ('0' + bjTime.getUTCHours()).slice(-2);
+  const mi = ('0' + bjTime.getUTCMinutes()).slice(-2);
+  const s = ('0' + bjTime.getUTCSeconds()).slice(-2);
+  return `${y}-${m}-${d} ${h}:${mi}:${s}`;
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById("val_plate").textContent = config.plate;
+    document.getElementById("val_name").textContent  = config.name;
+    document.getElementById("val_join").textContent   = config.joinTime;
+
+    document.querySelectorAll(".watermark-plate").forEach(el=>{
+        el.textContent = config.plate;
+    });
+
+    const timeStr = formatBeijingTime();
+    document.querySelectorAll('.time-watermark').forEach(el => {
+        el.textContent = timeStr;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const iframe = document.querySelector('.iframe-container');
+    iframe.onload = function() {
+        setTimeout(()=>{
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const zp1Dom = iframeDoc.getElementById('zp1');
+            if(zp1Dom){
+                zp1Dom.textContent = config.plate;
+                console.log("iframe防伪车牌更新为：", config.plate);
+            }else{
+                console.log("iframe内找不到 #zp1");
+            }
+        },150);
+    }
+})
+</script>
+</body>
+</html>
