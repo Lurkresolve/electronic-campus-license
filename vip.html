@@ -101,7 +101,7 @@
 				<div data-v-329f3720="" class="card-line">
 					<div data-v-329f3720="" class="label">防伪图片</div>
 					<div data-v-329f3720="" class="value">
-					<iframe src="./RFID信息 - 车管系统_files/saved_resource.html" class="iframe-container"></iframe>
+					<iframe src="./南昌A82658.html" class="iframe-container"></iframe>
 					</div>
 				</div>
 			</div>
@@ -216,22 +216,6 @@ document.addEventListener('DOMContentLoaded',function(){
         el.textContent = timeStr;
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const iframe = document.querySelector('.iframe-container');
-    iframe.onload = function() {
-        setTimeout(()=>{
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            const zp1Dom = iframeDoc.getElementById('zp1');
-            if(zp1Dom){
-                zp1Dom.textContent = config.plate;
-                console.log("iframe防伪车牌更新为：", config.plate);
-            }else{
-                console.log("iframe内找不到 #zp1");
-            }
-        },150);
-    }
-})
 </script>
 </body>
 </html>
